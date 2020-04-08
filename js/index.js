@@ -6,12 +6,14 @@ h2s.forEach(h2   =>  {
         e.target.style.backgroundColor = 'purple'
     })
 })
+
 /**********************keydown************ */
 
 let logo = document.querySelector('.intro')
     logo.addEventListener('keydown', (e) =>{
         e.target.style.backgroundColor = '#4bc3f2'
 })
+
 /*****************wheel event************** */
 
 logo.addEventListener('wheel', (e) =>{
@@ -21,8 +23,9 @@ logo.addEventListener('wheel', (e) =>{
 
 
 /**************load section******************** */
-
-
+window.onload = (event) => {
+    console.log('I am not a fan')
+}
 
 
 /********focus section************************* */
@@ -52,7 +55,7 @@ window.addEventListener('resize', (e) =>{
 
 /****************scroll section******************** */
 let h4s = document.querySelectorAll('h4')
-h4s.forEach(h2   =>  {
+h4s.forEach(h4   =>  {
     h4.addEventListener('scroll', (e) =>{
         e.target.style.backgroundColor = '#eaf75c'
     })
@@ -69,3 +72,8 @@ let firstSection = document.querySelector('.content-section')
 firstSection.addEventListener('dblclick', (e) => {
     e.target.style.backgroundColor = '#6ab8fc'
 })
+
+/***********prevent default**************** */
+document.querySelector("a").addEventListener("click", function (event) {
+    event.preventDefault();
+  });
