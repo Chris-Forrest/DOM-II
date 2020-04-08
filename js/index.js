@@ -17,7 +17,30 @@ let logo = document.querySelector('.intro')
 logo.addEventListener('wheel', (e) =>{
     e.target.style.backgroundColor = '#945687'
 }) 
-/*************dragging section***********/
+/*************drag/drop section***********/
+
+
+/**************load section******************** */
+
+/********focus section************************* */
+
+
+/*************resize section************************* */
+
+window.addEventListener('resize', (e) =>{
+    e.target.style.backgroundColor = '#c8e3fa'
+})
+
+
+/****************scroll section******************** */
+
+h2s.forEach(h2   =>  {
+    h2.addEventListener('scroll', (e) =>{
+        e.target.style.backgroundColor = '#eaf75c'
+    })
+})
+
+/**************select section******************** */
 
 /********************dblclick************* */
 
