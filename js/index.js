@@ -22,25 +22,46 @@ logo.addEventListener('wheel', (e) =>{
 
 /**************load section******************** */
 
+
+
+
 /********focus section************************* */
+
+let nav = document.querySelector('nav')
+
+nav.addEventListener('focus', (event) =>{
+    event.target.style.background = '#e3f520'
+},
+true
+)
+
+nav.addEventListener('blur', (event) =>{
+    event.target.style.background = ''
+},
+true
+)
+
 
 
 /*************resize section************************* */
 
 window.addEventListener('resize', (e) =>{
-    e.target.style.backgroundColor = '#c8e3fa'
+    e.target.style.backgroundColor = '#eaf75c'
 })
 
 
 /****************scroll section******************** */
-
-h2s.forEach(h2   =>  {
-    h2.addEventListener('scroll', (e) =>{
+let h4s = document.querySelectorAll('h4')
+h4s.forEach(h2   =>  {
+    h4.addEventListener('scroll', (e) =>{
         e.target.style.backgroundColor = '#eaf75c'
     })
 })
 
 /**************select section******************** */
+
+
+
 
 /********************dblclick************* */
 
