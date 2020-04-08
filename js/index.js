@@ -1,3 +1,5 @@
+
+
 /****************mouseover************* */
 
 let h2s = document.querySelectorAll('h2')
@@ -7,19 +9,31 @@ h2s.forEach(h2   =>  {
     })
 })
 
+h2s.forEach(h2 =>{ 
+    h2.addEventListener( 'mouseout',(e)=>{
+        e.target.style.backgroundColor = '#f0b369'
+    })
+})
 /**********************keydown************ */
 
-let logo = document.querySelector('.intro')
-    logo.addEventListener('keydown', (e) =>{
+let intro = document.querySelector('.intro')
+    intro.addEventListener('keydown', (e) =>{
         e.target.style.backgroundColor = '#4bc3f2'
 })
 
+
+
 /*****************wheel event************** */
 
-logo.addEventListener('wheel', (e) =>{
+intro.addEventListener('wheel', (e) =>{
     e.target.style.backgroundColor = '#945687'
 }) 
 /*************drag/drop section***********/
+let body = document.querySelector('body')
+body.addEventListener("drag", (e) => {
+    e.target.style.backgroundColor = '#f0a03e'
+})
+
 
 
 /**************load section******************** */
@@ -48,23 +62,21 @@ true
 
 
 /*************resize section************************* */
+let h4s = document.querySelectorAll('h4')
 
-window.addEventListener('resize', (e) =>{
+h4s.forEach(h4 => {
+    h4.addEventListener('resize', (e) =>{
     e.target.style.backgroundColor = '#eaf75c'
+    })
 })
 
-
 /****************scroll section******************** */
-let h4s = document.querySelectorAll('h4')
+
 h4s.forEach(h4   =>  {
     h4.addEventListener('scroll', (e) =>{
         e.target.style.backgroundColor = '#eaf75c'
     })
 })
-
-/**************select section******************** */
-
-
 
 
 /********************dblclick************* */
@@ -98,6 +110,3 @@ navLinks.forEach(a   =>  {
     })
 })
 
-/*document.querySelector("a").addEventListener("click", function (event) {
-    event.preventDefault();
-  });*/
