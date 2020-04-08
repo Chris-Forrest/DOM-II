@@ -32,8 +32,9 @@ window.onload = (event) => {
 
 let nav = document.querySelector('nav')
 
+
 nav.addEventListener('focus', (event) =>{
-    event.target.style.background = '#e3f520'
+        event.target.style.background = '#e3f520'
 },
 true
 )
@@ -73,7 +74,30 @@ firstSection.addEventListener('dblclick', (e) => {
     e.target.style.backgroundColor = '#6ab8fc'
 })
 
+/************prevent propagation**************** */
+let destination = document.querySelector('.destination')
+let destH4 = document.querySelector('.destination h4')
+
+destination.addEventListener('click', (event) =>{
+    event.target.style.backgroundColor = '#18f532'
+})
+
+destH4.addEventListener('click', (event) =>{
+    event.stopPropagation()
+})
+
+
+
 /***********prevent default**************** */
-document.querySelector("a").addEventListener("click", function (event) {
+
+let navLinks = document.querySelectorAll('a')
+
+navLinks.forEach(a   =>  {
+    a.addEventListener('click', (e) =>{
+        e.preventDefault()
+    })
+})
+
+/*document.querySelector("a").addEventListener("click", function (event) {
     event.preventDefault();
-  });
+  });*/
